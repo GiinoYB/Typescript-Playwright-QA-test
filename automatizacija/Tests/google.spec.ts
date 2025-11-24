@@ -1,9 +1,10 @@
-import {test, expect} from '@playwright/test';
+import { test } from '@playwright/test';
+import { GooglePage } from '../src/pages/GooglePage';
 
-test('otvaranje google stranice', async({page}) => {
-    //1. otvaramo google.com
-    await page.goto('https://google.com');
+test('Google search test (POM)', async ({ page }) => {
+  const google = new GooglePage(page);
 
-    //2. validiramo da je naslov stranice "Google"
-    await expect(page).toHaveTitle(/Google/);
+  await google.goto();
+  await google.search('Playwright automation');
+  await google.expectResults();
 });
