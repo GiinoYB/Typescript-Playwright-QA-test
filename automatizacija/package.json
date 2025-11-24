@@ -2,7 +2,11 @@
   "name": "automatizacija",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {"scripts": {
+  "test": "npx playwright test",
+  "test:headed": "npx playwright test --headed",
+  "test:ui": "npx playwright test --ui"
+}},
   "keywords": [],
   "author": "",
   "license": "ISC",
