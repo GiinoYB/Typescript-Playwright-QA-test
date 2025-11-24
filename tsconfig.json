@@ -9,5 +9,5 @@
     "resolveJsonModule": true,
     "outDir": "dist"
   },
-  "include": ["tests", "playwright.config.ts"]
+  "include": ["automatizacija/Tests", "playwright.config.ts"]
 }
