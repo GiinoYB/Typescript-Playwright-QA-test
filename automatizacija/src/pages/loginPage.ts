@@ -5,7 +5,7 @@ export class LoginPage {
   readonly usernameField = '#user-name';
   readonly passwordField = '#password';
   readonly loginButton = '#login-button';
-  readonly errorMessage = '[data-test="error"]';
+  readonly errorMessage = '#error-message-container';
 
   constructor(page: Page) {
     this.page = page;
@@ -22,6 +22,6 @@ export class LoginPage {
   }
 
   async expectLoginError() {
-    await expect(this.page.locator(this.errorMessage)).toBeVisible();
+    await expect(this.page.locator('Epic sadface: Sorry, this user has been locked out.')).toBeVisible();
   }
 }
