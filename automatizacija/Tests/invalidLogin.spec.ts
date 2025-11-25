@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { LoginPage }  from '../src/pages/loginPage';
+import { LoginPage }  from '../src/pages/LoginPage';
 
 test('Login test - invalid credentials', async ({ page }) => {
   const login = new LoginPage(page);

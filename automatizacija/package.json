@@ -2,11 +2,13 @@
   "name": "automatizacija",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {"scripts": {
+  "scripts": {
   "test": "npx playwright test",
   "test:headed": "npx playwright test --headed",
-  "test:ui": "npx playwright test --ui"
-}},
+  "test:ui": "npx playwright test --ui",
+  "valid" :  "npx playwright test automatizacija/Tests/validLogin.spec.ts --headed --project=chromium",
+  "invalid" :  "npx playwright test automatizacija/Tests/invalidLogin.spec.ts --headed"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

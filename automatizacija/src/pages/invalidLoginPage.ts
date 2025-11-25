@@ -5,7 +5,7 @@ export class LoginPage {
   readonly usernameField = '#user-name';
   readonly passwordField = '#password';
   readonly loginButton = '#login-button';
-  readonly errorMessage = '#error-message-container';
+  readonly errorMessage = '.error-message-container';
 
   constructor(page: Page) {
     this.page = page;
@@ -21,14 +21,10 @@ export class LoginPage {
     await this.page.click(this.loginButton);
   }
 
-  async expectSuccessfulLogin() {
-  await expect(this.page).toHaveURL(/.*inventory.html/);
-}
 
-async expectLoginError() {
+  async expectLoginError() {
     const error = this.page.locator('.error-message-container');
     
     await expect(error).toBeVisible({ timeout: 5000 });
     await expect(error).toContainText('Sorry, this user has been locked out.');
-}
-}
+}}
