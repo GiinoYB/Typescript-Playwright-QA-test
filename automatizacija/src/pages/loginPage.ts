@@ -25,7 +25,7 @@ export class LoginPage {
   await expect(this.page).toHaveURL(/.*inventory.html/);
 }
 
-async expectLoginError() {
+  async expectLoginError() {
     const error = this.page.locator('.error-message-container');
     
     await expect(error).toBeVisible({ timeout: 5000 });
